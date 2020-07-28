@@ -65,9 +65,6 @@ if __name__ == "__main__":
                   
 
 
-# In[4]:
-
-
 #problem 2 Newton Method
 estimate = 1.0 #initialize
 tolerance = 0.001
@@ -84,9 +81,6 @@ x = float(input("Enter a positive number:")) #take input we can also take decima
 print("The program's estimate:",newton(x, estimate))
 
 
-# In[5]:
-
-
 #problem 3 Exponent
 def expo(number,exponent):
     if(exponent==1 or exponent==0): #check if the value is 0 or 1
@@ -100,9 +94,6 @@ exponent=int(input("Enter exponential value: ")) #take input from the user
 print("The number raised to given exponent is:",expo(number,exponent)) #passing paramters to the function
 
 # O(2^n)is the computational complexity for exponential function
-
-
-# In[2]:
 
 
 #problem 4 Fibonacci Sequence
@@ -124,5 +115,20 @@ def Fibonacci(x):
     
 x = int(input("Enter a positive number:")) #take the input
 print(Fibonacci(x)) 
-  
+
+#Problem 5 Reverse the elements in the list
+original_List = [] 
+
+n = int(input("Enter number of elements : ")) 
+for i in range(0, n): 
+    pool_list = int(input()) #take elements in the list  
+    original_List.append(pool_list) #append them to main list
+    
+print("The input list given by user",original_List)
+#x = [int(x) for x in input("Input list: ").split(",")] whole thing can be repaced by one line
+def reverse(original_List):
+    new_List=original_List[::-1]  #using slicing method
+    return new_List
+print("The reversed list:",reverse(original_List))
+print("The computational complexity for the above code is O(n)")
 
